@@ -4,7 +4,6 @@ var app = express();
 app.engine('.html', require('ejs').__express);
 
 // Optional since express defaults to CWD/views
-
 app.set('views', __dirname + '/views');
 
 // Without this you would need to
@@ -21,8 +20,8 @@ var quotes = {
 };
 
 app.get('/quotes/:name', function (req,res){
-  	res.write(quotes[req.params.name]);
-  	res.render('quote.html',{quote: quotes[req.params.name], name : req.params.name });
+  	//res.write(quotes[req.params.name]);
+  	res.render('quote',{quote: quotes[req.params.name], name : req.params.name });
   	res.end();
 });
 
