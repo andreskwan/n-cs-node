@@ -11,7 +11,6 @@ app.set('views', __dirname + '/views');
 // ex: res.render('users.html').
 app.set('view engine', 'html');
 
-
 var quotes = {
   'einstein': 'Life is like riding a bicycle. To keep your balance you must keep moving',
   'berners-lee': 'The Web does not just connect machines, it connects people',
@@ -20,7 +19,6 @@ var quotes = {
 };
 
 app.get('/quotes/:name', function (req,res){
-  	//res.write(quotes[req.params.name]);
   	res.render('quote',{quote: quotes[req.params.name], name : req.params.name });
   	res.end();
 });

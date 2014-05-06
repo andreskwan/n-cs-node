@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title> First experiment with ejs </title>
+  <script scr ="/socket.io/socket.io.js"></script>
+	<script>
+	// use the socket.io server to connect to localhost:8080 here
+		var server = io.connect('http://localhost:3000');
+	</script>
+
   <style type="text/css">
     body {
       padding: 50px;
